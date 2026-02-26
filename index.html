@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormuLoan - Loan Decision System (Serverless)</title>
+    <title>FormuLoan - Loan Decision System</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/centered_text.css">
     <link rel="stylesheet" href="css/diff_style.css">
@@ -14,7 +14,11 @@
         <!-- Header -->
         <header class="header">
             <h1>🏦 FormuLoan Decision System</h1>
-            <p class="subtitle">ML-powered loan approval prediction (Serverless Edge)</p>
+            <p class="subtitle">ML-powered loan approval prediction</p>
+            <div class="header-links">
+                <a href="https://github.com/Noma4321" target="_blank">GitHub: Noma4321</a> • 
+                <a href="https://noma.is-a.dev" target="_blank">noma.is-a.dev</a>
+            </div>
         </header>
 
         <div class="main-layout">
@@ -27,6 +31,14 @@
                 <div class="examples-section">
                     <h3 class="section-title good">✅ Good Loans</h3>
                     <div class="examples-list" id="good-examples-list">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+
+                <!-- Near Approval Section -->
+                <div class="examples-section">
+                    <h3 class="section-title borderline">💡 Near Approval</h3>
+                    <div class="examples-list" id="near-approval-examples-list">
                         <!-- Loaded via JS -->
                     </div>
                 </div>
@@ -337,6 +349,10 @@
                 </div>
             </main>
         </div>
+    </div>
+
+    <div class="footer-bar">
+        Created by Noam Malka and Omer Edri
     </div>
 
     <script src="js/examples.js"></script>

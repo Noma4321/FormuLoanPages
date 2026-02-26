@@ -33,6 +33,7 @@ body {
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg);
+    padding-bottom: 40px; /* Space for floating footer */
 }
 
 /* Container */
@@ -46,20 +47,55 @@ body {
 .header {
     background: linear-gradient(135deg, var(--primary) 0%, #004494 100%);
     color: white;
-    padding: 40px; /* Increased padding */
+    padding: 20px 40px; /* Reduced padding */
     text-align: center;
     box-shadow: var(--shadow);
 }
 
 .header h1 {
-    font-size: 36px; /* Scaled up */
+    font-size: 32px; /* Slightly reduced */
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-    font-size: 18px; /* Scaled up */
+    font-size: 16px; /* Slightly reduced */
     opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.header-links {
+    font-size: 14px;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    margin: 0 5px;
+}
+
+.header-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Floating Footer Bar */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid var(--border);
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
 /* Main Layout */
@@ -177,6 +213,12 @@ body {
     border-left: 5px solid var(--danger);
 }
 
+.examples-section .section-title.borderline {
+    background: #E1F5FE;
+    color: #01579B;
+    border-left: 5px solid var(--primary);
+}
+
 /* Example Cards with Status */
 .example-card.good {
     border-left: 5px solid var(--success);
@@ -184,6 +226,10 @@ body {
 
 .example-card.bad {
     border-left: 5px solid var(--danger);
+}
+
+.example-card.borderline {
+    border-left: 5px solid var(--primary);
 }
 
 .card-header {

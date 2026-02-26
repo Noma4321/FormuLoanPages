@@ -38,7 +38,12 @@ const EXAMPLES = [
       "investors": 3,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9966666666666667
+    },
+    "category": "good"
   },
   {
     "id": 2,
@@ -79,7 +84,12 @@ const EXAMPLES = [
       "investors": 13,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9899999999999999
+    },
+    "category": "good"
   },
   {
     "id": 3,
@@ -120,7 +130,12 @@ const EXAMPLES = [
       "investors": 4,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9938888888888888
+    },
+    "category": "good"
   },
   {
     "id": 4,
@@ -161,7 +176,12 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9466666666666667
+    },
+    "category": "good"
   },
   {
     "id": 5,
@@ -202,7 +222,12 @@ const EXAMPLES = [
       "investors": 30,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 1.0
+    },
+    "category": "good"
   },
   {
     "id": 6,
@@ -243,7 +268,12 @@ const EXAMPLES = [
       "investors": 40,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 1.0
+    },
+    "category": "good"
   },
   {
     "id": 7,
@@ -284,7 +314,12 @@ const EXAMPLES = [
       "investors": 4,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9899999999999999
+    },
+    "category": "good"
   },
   {
     "id": 8,
@@ -325,7 +360,12 @@ const EXAMPLES = [
       "investors": 7,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9866666666666667
+    },
+    "category": "good"
   },
   {
     "id": 9,
@@ -366,7 +406,12 @@ const EXAMPLES = [
       "investors": 44,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 1.0
+    },
+    "category": "good"
   },
   {
     "id": 10,
@@ -407,7 +452,12 @@ const EXAMPLES = [
       "investors": 29,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9966666666666667
+    },
+    "category": "good"
   },
   {
     "id": 11,
@@ -448,7 +498,12 @@ const EXAMPLES = [
       "investors": 4,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9866666666666667
+    },
+    "category": "good"
   },
   {
     "id": 12,
@@ -489,7 +544,12 @@ const EXAMPLES = [
       "investors": 27,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9966666666666667
+    },
+    "category": "good"
   },
   {
     "id": 13,
@@ -530,7 +590,12 @@ const EXAMPLES = [
       "investors": 42,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 1.0
+    },
+    "category": "good"
   },
   {
     "id": 14,
@@ -571,7 +636,12 @@ const EXAMPLES = [
       "investors": 41,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9899999999999999
+    },
+    "category": "good"
   },
   {
     "id": 15,
@@ -612,7 +682,12 @@ const EXAMPLES = [
       "investors": 35,
       "investment_friends_amount": 0.0,
       "recommendations": 1
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9966666666666667
+    },
+    "category": "good"
   },
   {
     "id": 16,
@@ -653,7 +728,12 @@ const EXAMPLES = [
       "investors": 2,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9266666666666667
+    },
+    "category": "good"
   },
   {
     "id": 17,
@@ -694,7 +774,12 @@ const EXAMPLES = [
       "investors": 39,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9938888888888888
+    },
+    "category": "good"
   },
   {
     "id": 18,
@@ -735,7 +820,12 @@ const EXAMPLES = [
       "investors": 50,
       "investment_friends_amount": 0.0,
       "recommendations": 2
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9966666666666667
+    },
+    "category": "good"
   },
   {
     "id": 19,
@@ -776,7 +866,12 @@ const EXAMPLES = [
       "investors": 29,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9822222222222221
+    },
+    "category": "good"
   },
   {
     "id": 20,
@@ -817,7 +912,12 @@ const EXAMPLES = [
       "investors": 39,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": true,
+      "probability": 0.9205555555555556
+    },
+    "category": "good"
   },
   {
     "id": 21,
@@ -858,7 +958,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.07888888888888888
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 22,
@@ -899,7 +1005,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.02388888888888889
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 23,
@@ -940,7 +1052,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.08722222222222221
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 24,
@@ -981,7 +1099,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.10722222222222222
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 25,
@@ -1022,7 +1146,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.033888888888888885
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 26,
@@ -1063,7 +1193,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 27,
@@ -1104,7 +1240,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.02722222222222222
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 28,
@@ -1145,7 +1287,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.003888888888888889
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 29,
@@ -1186,7 +1334,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 30,
@@ -1227,7 +1381,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 31,
@@ -1268,7 +1428,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 32,
@@ -1309,7 +1475,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 33,
@@ -1350,7 +1522,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 34,
@@ -1391,7 +1569,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 35,
@@ -1432,7 +1616,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 36,
@@ -1473,7 +1663,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.003888888888888889
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 37,
@@ -1514,7 +1710,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 38,
@@ -1555,7 +1757,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 39,
@@ -1596,7 +1804,13 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
   },
   {
     "id": 40,
@@ -1637,6 +1851,362 @@ const EXAMPLES = [
       "investors": 1,
       "investment_friends_amount": 0.0,
       "recommendations": 0
-    }
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.0005555555555555556
+    },
+    "alternatives": [],
+    "category": "bad"
+  },
+  {
+    "id": 100,
+    "name": "Borderline Case 1",
+    "description": "Found in actual dataset. Initially rejected but easily fixable.",
+    "tags": [
+      "data-driven",
+      "borderline"
+    ],
+    "loan_status": 2,
+    "category": "near-approval",
+    "data": {
+      "term": 36,
+      "lender_yield": 0.1415,
+      "listing_category": 1,
+      "employment_duration": 7,
+      "is_homeowner": true,
+      "in_group": false,
+      "credit_score_lower": 800,
+      "credit_score_upper": 819,
+      "debt_to_income": 0.21,
+      "current_credit_lines": 8,
+      "revolving_balance": 14085.0,
+      "bankcard_utilization": 0.57,
+      "delinquencies_7y": 0,
+      "amount_delinquent": 0.0,
+      "public_records": 0,
+      "total_inquiries": 5,
+      "inquiries_6m": 1,
+      "total_trades": 17,
+      "trades_never_delinquent": 0.88,
+      "available_credit": 9741.0,
+      "investors": 337,
+      "investment_friends_amount": 0.0,
+      "recommendations": 0,
+      "monthly_income": 5000.0,
+      "loan_amount": 15000.0,
+      "monthly_payment": 521.08,
+      "employment_status": "Other",
+      "state": "NY",
+      "income_range": "$50,000-74,999",
+      "income_verifiable": true
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.4938888888888889
+    },
+    "alternatives": [
+      {
+        "amount": 15000,
+        "term": 60,
+        "yield": 0.1215,
+        "probability": 0.5705555555555555,
+        "monthly_payment": 268.45746996466437
+      },
+      {
+        "amount": 15000,
+        "term": 60,
+        "yield": 0.1315,
+        "probability": 0.5605555555555556,
+        "monthly_payment": 290.55273498233225
+      },
+      {
+        "amount": 14000,
+        "term": 60,
+        "yield": 0.1215,
+        "probability": 0.5705555555555555,
+        "monthly_payment": 250.56030530035338
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Borderline Case 2",
+    "description": "Found in actual dataset. Initially rejected but easily fixable.",
+    "tags": [
+      "data-driven",
+      "borderline"
+    ],
+    "loan_status": 2,
+    "category": "near-approval",
+    "data": {
+      "term": 36,
+      "lender_yield": 0.1459,
+      "listing_category": 1,
+      "employment_duration": 19,
+      "is_homeowner": false,
+      "in_group": false,
+      "credit_score_lower": 720,
+      "credit_score_upper": 739,
+      "debt_to_income": 0.25,
+      "current_credit_lines": 7,
+      "revolving_balance": 3735.0,
+      "bankcard_utilization": 0.61,
+      "delinquencies_7y": 0,
+      "amount_delinquent": 0.0,
+      "public_records": 0,
+      "total_inquiries": 4,
+      "inquiries_6m": 0,
+      "total_trades": 18,
+      "trades_never_delinquent": 0.88,
+      "available_credit": 2365.0,
+      "investors": 65,
+      "investment_friends_amount": 0.0,
+      "recommendations": 0,
+      "monthly_income": 2253.333333,
+      "loan_amount": 2700.0,
+      "monthly_payment": 94.38,
+      "employment_status": "Other",
+      "state": "PA",
+      "income_range": "$25,000-49,999",
+      "income_verifiable": true
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.49722222222222223
+    },
+    "alternatives": [
+      {
+        "amount": 2700,
+        "term": 60,
+        "yield": 0.1259,
+        "probability": 0.5672222222222222,
+        "monthly_payment": 48.86542289239205
+      },
+      {
+        "amount": 2700,
+        "term": 60,
+        "yield": 0.1359,
+        "probability": 0.5372222222222222,
+        "monthly_payment": 52.74671144619602
+      },
+      {
+        "amount": 1700,
+        "term": 60,
+        "yield": 0.1259,
+        "probability": 0.5672222222222222,
+        "monthly_payment": 30.76711811743203
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Borderline Case 3",
+    "description": "Found in actual dataset. Initially rejected but easily fixable.",
+    "tags": [
+      "data-driven",
+      "borderline"
+    ],
+    "loan_status": 2,
+    "category": "near-approval",
+    "data": {
+      "term": 60,
+      "lender_yield": 0.173,
+      "listing_category": 14,
+      "employment_duration": 170,
+      "is_homeowner": false,
+      "in_group": false,
+      "credit_score_lower": 700,
+      "credit_score_upper": 719,
+      "debt_to_income": 0.39,
+      "current_credit_lines": 16,
+      "revolving_balance": 16804.0,
+      "bankcard_utilization": 0.32,
+      "delinquencies_7y": 0,
+      "amount_delinquent": 0.0,
+      "public_records": 0,
+      "total_inquiries": 2,
+      "inquiries_6m": 1,
+      "total_trades": 43,
+      "trades_never_delinquent": 1.0,
+      "available_credit": 24577.0,
+      "investors": 26,
+      "investment_friends_amount": 0.0,
+      "recommendations": 0,
+      "monthly_income": 11250.0,
+      "loan_amount": 11000.0,
+      "monthly_payment": 281.13,
+      "employment_status": "Other",
+      "state": "AZ",
+      "income_range": "$100,000+",
+      "income_verifiable": true
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.49666666666666665
+    },
+    "alternatives": [
+      {
+        "amount": 11000,
+        "term": 36,
+        "yield": 0.153,
+        "probability": 0.5233333333333333,
+        "monthly_payment": 414.3823699421966
+      },
+      {
+        "amount": 11000,
+        "term": 36,
+        "yield": 0.163,
+        "probability": 0.5133333333333333,
+        "monthly_payment": 441.46618497109836
+      },
+      {
+        "amount": 10000,
+        "term": 36,
+        "yield": 0.153,
+        "probability": 0.5233333333333333,
+        "monthly_payment": 376.71124540199685
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Borderline Case 4",
+    "description": "Found in actual dataset. Initially rejected but easily fixable.",
+    "tags": [
+      "data-driven",
+      "borderline"
+    ],
+    "loan_status": 2,
+    "category": "near-approval",
+    "data": {
+      "term": 36,
+      "lender_yield": 0.1399,
+      "listing_category": 3,
+      "employment_duration": 62,
+      "is_homeowner": true,
+      "in_group": false,
+      "credit_score_lower": 720,
+      "credit_score_upper": 739,
+      "debt_to_income": 0.25,
+      "current_credit_lines": 5,
+      "revolving_balance": 29954.0,
+      "bankcard_utilization": 0.76,
+      "delinquencies_7y": 0,
+      "amount_delinquent": 0.0,
+      "public_records": 0,
+      "total_inquiries": 14,
+      "inquiries_6m": 2,
+      "total_trades": 12,
+      "trades_never_delinquent": 0.76,
+      "available_credit": 9446.0,
+      "investors": 406,
+      "investment_friends_amount": 0.0,
+      "recommendations": 0,
+      "monthly_income": 4000.0,
+      "loan_amount": 15000.0,
+      "monthly_payment": 511.05,
+      "employment_status": "Full-time",
+      "state": "AZ",
+      "income_range": "$25,000-49,999",
+      "income_verifiable": true
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.4305555555555555
+    },
+    "alternatives": [
+      {
+        "amount": 14000,
+        "term": 60,
+        "yield": 0.1199,
+        "probability": 0.5072222222222221,
+        "monthly_payment": 245.2747762687634
+      },
+      {
+        "amount": 13000,
+        "term": 60,
+        "yield": 0.1199,
+        "probability": 0.5172222222222222,
+        "monthly_payment": 227.75514939242316
+      },
+      {
+        "amount": 13000,
+        "term": 60,
+        "yield": 0.1299,
+        "probability": 0.5072222222222221,
+        "monthly_payment": 246.75057469621154
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Borderline Case 5",
+    "description": "Found in actual dataset. Initially rejected but easily fixable.",
+    "tags": [
+      "data-driven",
+      "borderline"
+    ],
+    "loan_status": 2,
+    "category": "near-approval",
+    "data": {
+      "term": 36,
+      "lender_yield": 0.14,
+      "listing_category": 3,
+      "employment_duration": 8,
+      "is_homeowner": true,
+      "in_group": false,
+      "credit_score_lower": 680,
+      "credit_score_upper": 699,
+      "debt_to_income": 0.2258810901466056,
+      "current_credit_lines": 11,
+      "revolving_balance": 34918.0,
+      "bankcard_utilization": 0.66,
+      "delinquencies_7y": 0,
+      "amount_delinquent": 0.0,
+      "public_records": 0,
+      "total_inquiries": 2,
+      "inquiries_6m": 2,
+      "total_trades": 23,
+      "trades_never_delinquent": 0.86,
+      "available_credit": 17582.0,
+      "investors": 238,
+      "investment_friends_amount": 0.0,
+      "recommendations": 0,
+      "monthly_income": 6250.0,
+      "loan_amount": 10000.0,
+      "monthly_payment": 346.65,
+      "employment_status": "Self-employed",
+      "state": "AZ",
+      "income_range": "$75,000-99,999",
+      "income_verifiable": false
+    },
+    "prediction": {
+      "approved": false,
+      "probability": 0.4305555555555556
+    },
+    "alternatives": [
+      {
+        "amount": 10000,
+        "term": 60,
+        "yield": 0.12,
+        "probability": 0.5072222222222221,
+        "monthly_payment": 178.27714285714282
+      },
+      {
+        "amount": 9000,
+        "term": 60,
+        "yield": 0.12,
+        "probability": 0.5072222222222221,
+        "monthly_payment": 160.44942857142854
+      },
+      {
+        "amount": 8000,
+        "term": 60,
+        "yield": 0.12,
+        "probability": 0.5072222222222221,
+        "monthly_payment": 142.62171428571426
+      }
+    ]
   }
 ];
