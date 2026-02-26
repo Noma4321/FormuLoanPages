@@ -9,23 +9,41 @@ const STATE_MAPPING = {
 function engineerFeatures(userData) {
     let features = { ...userData };
     
-    // Convert boolean/string checkboxes to numbers if not already
-    features.IsBorrowerHomeowner = features.is_homeowner ? 1 : 0;
-    features.CurrentlyInGroup = features.in_group ? 1 : 0;
+    // Ensure all numeric inputs are actually numbers
+    const numericKeys = [
+        'term', 'lender_yield', 'listing_category', 'employment_duration',
+        'credit_score_lower', 'credit_score_upper', 'debt_to_income',
+        'current_credit_lines', 'revolving_balance', 'bankcard_utilization',
+        'delinquencies_7y', 'amount_delinquent', 'public_records',
+        'total_inquiries', 'inquiries_6m', 'total_trades',
+        'trades_never_delinquent', 'available_credit', 'investors',
+        'investment_friends_amount', 'recommendations', 'monthly_income',
+        'loan_amount', 'monthly_payment'
+    ];
+    
+    numericKeys.forEach(key => {
+        features[key] = Number(features[key]) || 0;
+    });
 
-    // Capitalize some names as they might be mapped in the python side
-    features.Term = Number(features.term);
-    features.LenderYield = Number(features.lender_yield);
+    // Checkboxes to 1 or 0
+    features.is_homeowner = features.is_homeowner ? 1 : 0;
+    features.in_group = features.in_group ? 1 : 0;
+    features.income_verifiable = features.income_verifiable ? 1 : 0;
     
     // Credit score mean
-    features.CreditScoreMean = (Number(features.credit_score_lower) + Number(features.credit_score_upper)) / 2;
+    features.CreditScoreMean = (features.credit_score_lower + features.credit_score_upper) / 2;
     
     // Avoid division by zero
-    let monthlyIncome = Number(features.monthly_income) || 0.01;
+    let monthlyIncome = features.monthly_income || 0.01;
     
     // Ratios
-    features.LoanToIncome = Number(features.loan_amount) / monthlyIncome;
-    features.PaymentToIncome = Number(features.monthly_payment) / monthlyIncome;
+    features.LoanToIncome = features.loan_amount / monthlyIncome;
+    features.PaymentToIncome = features.monthly_payment / monthlyIncome;
+    
+    // Special case for trades_never_delinquent: form is 0-100, model likely expects 0-1
+    if (features.trades_never_delinquent > 1) {
+        features.trades_never_delinquent = features.trades_never_delinquent / 100;
+    }
     
     // One-hot encode employment status
     let empStatus = features.employment_status || 'Other';

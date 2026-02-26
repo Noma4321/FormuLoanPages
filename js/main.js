@@ -85,6 +85,7 @@ function loadExample(exampleId) {
     document.getElementById('investors').value = data.investors;
     document.getElementById('investment_friends_amount').value = data.investment_friends_amount;
     document.getElementById('recommendations').value = data.recommendations;
+    document.getElementById('income_verifiable').checked = data.income_verifiable;
     
     // Highlight active card
     document.querySelectorAll('.example-card').forEach(card => {
@@ -280,6 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Checkboxes might be missing if unchecked
         data.is_homeowner = form.querySelector('#is_homeowner').checked;
         data.in_group = form.querySelector('#in_group').checked;
+        data.income_verifiable = form.querySelector('#income_verifiable').checked;
         
         // Simulate a small network delay for UX
         setTimeout(() => {
