@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormuLoan - Loan Decision System (Serverless)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/centered_text.css">
+    <link rel="stylesheet" href="css/diff_style.css">
+    <link rel="stylesheet" href="css/outside_text.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏦 FormuLoan Decision System</h1>
+            <p class="subtitle">ML-powered loan approval prediction (Serverless Edge)</p>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2>📋 Example Loans</h2>
+                <p class="sidebar-subtitle">Click to load into form</p>
+                
+                <!-- Good Loans Section -->
+                <div class="examples-section">
+                    <h3 class="section-title good">✅ Good Loans</h3>
+                    <div class="examples-list" id="good-examples-list">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+                
+                <!-- Bad Loans Section -->
+                <div class="examples-section">
+                    <h3 class="section-title bad">❌ Bad Loans</h3>
+                    <div class="examples-list" id="bad-examples-list">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <form id="loanForm" class="loan-form">
+                    <!-- Section 1: Borrower Information -->
+                    <section class="form-section">
+                        <h2>👤 Borrower Information</h2>
+                        
+                        <div class="form-group">
+                            <label for="employment_status">Employment Status</label>
+                            <select id="employment_status" name="employment_status" required>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="Part-time">Part-time</option>
+                                <option value="Not employed">Not employed</option>
+                                <option value="Retired">Retired</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="employment_duration">Employment Duration (Months)</label>
+                            <input type="number" id="employment_duration" name="employment_duration" 
+                                   min="0" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="income_range">Income Range</label>
+                            <select id="income_range" name="income_range" required>
+                                <option value="Not displayed">Not displayed</option>
+                                <option value="Not employed">Not employed</option>
+                                <option value="$0">$0</option>
+                                <option value="$1-24,999">$1-24,999</option>
+                                <option value="$25,000-49,999">$25,000-49,999</option>
+                                <option value="$50,000-74,999" selected>$50,000-74,999</option>
+                                <option value="$75,000-99,999">$75,000-99,999</option>
+                                <option value="$100,000+">$100,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthly_income">Monthly Income ($)</label>
+                            <input type="number" id="monthly_income" name="monthly_income" 
+                                   min="0" step="any" value="5000" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="is_homeowner" name="is_homeowner" checked>
+                                <span class="checkmark"></span>
+                                Homeowner?
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">Borrower State</label>
+                            <select id="state" name="state" required>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA" selected>California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="in_group" name="in_group">
+                                <span class="checkmark"></span>
+                                Currently In Group?
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Section 2: Credit Profile -->
+                    <section class="form-section">
+                        <h2>💳 Credit Profile</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="credit_score_lower">Credit Score Range Lower</label>
+                                <input type="number" id="credit_score_lower" name="credit_score_lower" 
+                                       min="300" max="850" value="700" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="credit_score_upper">Credit Score Range Upper</label>
+                                <input type="number" id="credit_score_upper" name="credit_score_upper" 
+                                       min="300" max="850" value="719" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="debt_to_income">Debt-to-Income Ratio</label>
+                            <input type="number" id="debt_to_income" name="debt_to_income" 
+                                   min="0" max="10" step="any" value="0.2" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="current_credit_lines">Current Credit Lines</label>
+                            <input type="number" id="current_credit_lines" name="current_credit_lines" 
+                                   min="0" value="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="revolving_balance">Revolving Credit Balance ($)</label>
+                            <input type="number" id="revolving_balance" name="revolving_balance" 
+                                   min="0" step="any" value="5000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bankcard_utilization">Bankcard Utilization (0-1)</label>
+                            <input type="number" id="bankcard_utilization" name="bankcard_utilization" 
+                                   min="0" max="5" step="any" value="0.3" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delinquencies_7y">Delinquencies Last 7 Years</label>
+                            <input type="number" id="delinquencies_7y" name="delinquencies_7y" 
+                                   min="0" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount_delinquent">Amount Delinquent ($)</label>
+                            <input type="number" id="amount_delinquent" name="amount_delinquent" 
+                                   min="0" step="any" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="public_records">Public Records Last 10 Years</label>
+                            <input type="number" id="public_records" name="public_records" 
+                                   min="0" value="0" required>
+                        </div>
+                    </section>
+
+                    <!-- Section 3: Loan Details -->
+                    <section class="form-section">
+                        <h2>💰 Loan Details</h2>
+                        
+                        <div class="form-group">
+                            <label for="loan_amount">Loan Original Amount ($)</label>
+                            <input type="number" id="loan_amount" name="loan_amount" 
+                                   min="1000" step="any" value="10000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="term">Term (Months)</label>
+                            <select id="term" name="term" required>
+                                <option value="36" selected>36 months</option>
+                                <option value="60">60 months</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="listing_category">Listing Category</label>
+                            <select id="listing_category" name="listing_category" required>
+                                <option value="0">0 - Not Available</option>
+                                <option value="1" selected>1 - Debt Consolidation</option>
+                                <option value="2">2 - Home Improvement</option>
+                                <option value="3">3 - Business</option>
+                                <option value="4">4 - Personal Loan</option>
+                                <option value="5">5 - Student Use</option>
+                                <option value="6">6 - Auto</option>
+                                <option value="7">7 - Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lender_yield">Lender Yield (Interest Rate)</label>
+                            <input type="number" id="lender_yield" name="lender_yield" 
+                                   min="0" max="0.5" step="any" value="0.15" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthly_payment">Monthly Loan Payment ($)</label>
+                            <input type="number" id="monthly_payment" name="monthly_payment" 
+                                   min="0" step="any" value="300" required>
+                        </div>
+                    </section>
+
+                    <!-- Section 4: Financial History -->
+                    <section class="form-section">
+                        <h2>📊 Financial History</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="total_inquiries">Total Inquiries</label>
+                                <input type="number" id="total_inquiries" name="total_inquiries" 
+                                       min="0" value="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiries_6m">Inquiries Last 6 Months</label>
+                                <input type="number" id="inquiries_6m" name="inquiries_6m" 
+                                       min="0" value="0" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="total_trades">Total Trades</label>
+                            <input type="number" id="total_trades" name="total_trades" 
+                                   min="0" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trades_never_delinquent">Trades Never Delinquent (%)</label>
+                            <input type="number" id="trades_never_delinquent" name="trades_never_delinquent" 
+                                   min="0" max="100" step="any" value="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="available_credit">Available Bankcard Credit ($)</label>
+                            <input type="number" id="available_credit" name="available_credit" 
+                                   min="0" step="any" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="investors">Investors</label>
+                            <input type="number" id="investors" name="investors" 
+                                   min="1" value="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="investment_friends_amount">Investment From Friends ($)</label>
+                            <input type="number" id="investment_friends_amount" name="investment_friends_amount" 
+                                   min="0" value="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recommendations">Recommendations</label>
+                            <input type="number" id="recommendations" name="recommendations" 
+                                   min="0" value="0" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="income_verifiable" name="income_verifiable" checked>
+                                <span class="checkmark"></span>
+                                Income Verifiable?
+                            </label>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">🚀 Analyze Application</span>
+                        <span class="btn-loader" style="display: none;">⏳ Analyzing...</span>
+                    </button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="results-section" style="display: none;">
+                    <!-- Results will be inserted here by JavaScript -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/examples.js"></script>
+    <script src="js/models.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

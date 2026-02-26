@@ -1,0 +1,604 @@
+/* FormuLoan v1 - Professional Banking Theme */
+
+/* CSS Variables */
+:root {
+    --primary: #0066CC;
+    --primary-hover: #0052A3;
+    --primary-light: #E6F2FF;
+    --success: #28A745;
+    --success-light: #D4EDDA;
+    --danger: #DC3545;
+    --danger-light: #F8D7DA;
+    --warning: #FFC107;
+    --bg: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --border: #DEE2E6;
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+    --text-muted: #ADB5BD;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px; /* Scaled up from 14px */
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg);
+}
+
+/* Container */
+.container {
+    max-width: 1600px; /* Increased max-width for scaled UI */
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary) 0%, #004494 100%);
+    color: white;
+    padding: 40px; /* Increased padding */
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.header h1 {
+    font-size: 36px; /* Scaled up */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px; /* Scaled up */
+    opacity: 0.9;
+}
+
+/* Main Layout */
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 140px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 360px; /* Increased width */
+    background: white;
+    border-right: 1px solid var(--border);
+    padding: 30px; /* Increased padding */
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 22px; /* Scaled up */
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.sidebar-subtitle {
+    font-size: 14px; /* Scaled up */
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+/* Example Cards */
+.examples-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.example-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px; /* Increased padding */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.example-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.example-card.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.example-card h3 {
+    font-size: 16px; /* Scaled up */
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.example-description {
+    font-size: 14px; /* Scaled up */
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 14px;
+    font-weight: 500;
+}
+
+/* Examples Section */
+.examples-section {
+    margin-bottom: 30px;
+}
+
+.examples-section .section-title {
+    font-size: 15px; /* Scaled up */
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.examples-section .section-title.good {
+    background: #D4EDDA;
+    color: #155724;
+    border-left: 5px solid var(--success);
+}
+
+.examples-section .section-title.bad {
+    background: #F8D7DA;
+    color: #721C24;
+    border-left: 5px solid var(--danger);
+}
+
+/* Example Cards with Status */
+.example-card.good {
+    border-left: 5px solid var(--success);
+}
+
+.example-card.bad {
+    border-left: 5px solid var(--danger);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.status-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge.good {
+    background: var(--success);
+    color: white;
+}
+
+.status-badge.bad {
+    background: var(--danger);
+    color: white;
+}
+
+.status-badge.charged {
+    background: #6C757D;
+    color: white;
+}
+
+.status-badge.current {
+    background: var(--warning);
+    color: black;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px; /* Increased padding */
+    max-width: calc(100% - 360px); /* Adjusted for sidebar width */
+}
+
+/* Form */
+.loan-form {
+    max-width: 1200px; /* Increased to fill more space */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Form Sections */
+.form-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 35px; /* Increased padding */
+    margin-bottom: 35px;
+    box-shadow: var(--shadow);
+}
+
+.form-section h2 {
+    font-size: 24px; /* Scaled up */
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px; /* Increased gap */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px; /* Scaled up */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px; /* Increased padding */
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px; /* Scaled up */
+    color: var(--text-primary);
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin-top: 15px;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px !important; /* Scaled up */
+    text-transform: none !important;
+    font-weight: 400 !important;
+    color: var(--text-primary) !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 12px;
+    width: 20px; /* Scaled up */
+    height: 20px; /* Scaled up */
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 20px 40px; /* Increased padding */
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; /* Scaled up */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.submit-btn:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 40px;
+    max-width: 1200px; /* Matched form width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Result Cards */
+.result-card {
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.result-approved {
+    background: var(--success-light);
+    border-left: 6px solid var(--success);
+}
+
+.result-rejected {
+    background: var(--danger-light);
+    border-left: 6px solid var(--danger);
+}
+
+.result-card h3 {
+    font-size: 28px; /* Scaled up */
+    margin-bottom: 20px;
+}
+
+.result-approved h3 {
+    color: var(--success);
+}
+
+.result-rejected h3 {
+    color: var(--danger);
+}
+
+.result-card p {
+    font-size: 18px; /* Scaled up */
+    margin-bottom: 12px;
+}
+
+/* Probability Bar */
+.probability-container {
+    margin: 25px 0;
+}
+
+.probability-bar-bg {
+    height: 36px; /* Scaled up */
+    background: #E9ECEF;
+    border-radius: 18px;
+    overflow: hidden; /* Restore hidden overflow */
+    position: relative;
+}
+
+.probability-bar {
+    height: 100%;
+    border-radius: 18px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px; /* Scaled up */
+}
+
+.probability-bar.approved {
+    background: var(--success);
+}
+
+.probability-bar.rejected {
+    background: var(--danger);
+}
+
+/* Alternatives */
+.alternatives-section {
+    margin-top: 40px;
+}
+
+.alternatives-title {
+    font-size: 22px; /* Scaled up */
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.alternatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Wider columns */
+    gap: 25px;
+}
+
+.alternative-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+}
+
+.alternative-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.alternative-card h4 {
+    font-size: 16px; /* Scaled up */
+    color: var(--primary);
+    margin-bottom: 18px;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.alt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px; /* Scaled up */
+}
+
+.alt-label {
+    color: var(--text-secondary);
+}
+
+.alt-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.alt-confidence {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px; /* Scaled up */
+}
+
+.alt-confidence.approved {
+    color: var(--success);
+}
+
+/* Diff Styles */
+.diff {
+    font-size: 13px; /* Scaled up */
+    margin-left: 6px;
+    font-weight: normal;
+}
+
+.diff-pos {
+    color: #28A745;
+}
+
+.diff-neg {
+    color: #DC3545;
+}
+
+.diff-neutral {
+    color: #6C757D;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: var(--primary);
+    color: white;
+    padding: 18px 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: var(--shadow-hover);
+    z-index: 1000;
+    font-size: 16px; /* Scaled up */
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 300px;
+    }
+    
+    .main-content {
+        max-width: calc(100% - 300px);
+    }
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        max-height: 400px;
+    }
+    
+    .main-content {
+        max-width: 100%;
+        padding: 25px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .alternatives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        padding: 25px;
+    }
+    
+    .header h1 {
+        font-size: 26px;
+    }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}

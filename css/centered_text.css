@@ -1,0 +1,22 @@
+
+/* Centered Probability Text */
+.probability-text-centered {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #212529; /* Dark text for contrast */
+    z-index: 10;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8); /* White halo for readability on dark bars */
+}
+
+/* Ensure bg allows absolute positioning context */
+.probability-bar-bg {
+    position: relative !important;
+}
