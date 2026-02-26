@@ -47,25 +47,25 @@ body {
 .header {
     background: linear-gradient(135deg, var(--primary) 0%, #004494 100%);
     color: white;
-    padding: 20px 40px; /* Reduced padding */
+    padding: 12px 30px; /* Further reduced from 20px 40px */
     text-align: center;
     box-shadow: var(--shadow);
 }
 
 .header h1 {
-    font-size: 32px; /* Slightly reduced */
+    font-size: 24px; /* Reduced from 32px */
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 2px; /* Reduced from 5px */
 }
 
 .subtitle {
-    font-size: 16px; /* Slightly reduced */
+    font-size: 14px; /* Reduced from 16px */
     opacity: 0.9;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced from 10px */
 }
 
 .header-links {
-    font-size: 14px;
+    font-size: 12px; /* Reduced from 14px */
 }
 
 .header-links a {
@@ -627,11 +627,11 @@ body {
     }
     
     .header {
-        padding: 25px;
+        padding: 15px 20px;
     }
     
     .header h1 {
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 
