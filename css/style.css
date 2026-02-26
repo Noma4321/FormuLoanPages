@@ -106,10 +106,10 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 360px; /* Increased width */
+    width: 320px; /* Slightly reduced width */
     background: white;
     border-right: 1px solid var(--border);
-    padding: 30px; /* Increased padding */
+    padding: 15px; /* Reduced from 30px */
     overflow-y: auto;
     position: sticky;
     top: 0;
@@ -117,29 +117,29 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 22px; /* Scaled up */
+    font-size: 20px; /* Slightly reduced */
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 4px; /* Reduced from 8px */
 }
 
 .sidebar-subtitle {
-    font-size: 14px; /* Scaled up */
+    font-size: 13px; /* Slightly reduced */
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Reduced from 25px */
 }
 
 /* Example Cards */
 .examples-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px; /* Reduced from 16px */
 }
 
 .example-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px; /* Increased padding */
+    border-radius: 8px; /* Slightly reduced */
+    padding: 12px; /* Reduced from 20px */
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -276,13 +276,26 @@ body {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 40px; /* Increased padding */
-    max-width: calc(100% - 360px); /* Adjusted for sidebar width */
+    padding: 20px; /* Reduced from 40px */
+    max-width: calc(100% - 320px); /* Adjusted for sidebar width */
+}
+
+.main-title {
+    font-size: 22px; /* Slightly reduced */
+    color: var(--text-primary);
+    margin-bottom: 4px; /* Reduced from 8px */
+    font-weight: 600;
+}
+
+.main-subtitle {
+    font-size: 13px; /* Slightly reduced */
+    color: var(--text-secondary);
+    margin-bottom: 20px; /* Reduced from 25px */
 }
 
 /* Form */
 .loan-form {
-    max-width: 1200px; /* Increased to fill more space */
+    max-width: 1000px; /* Reduced from 1200px */
     margin: 0 auto; /* Center the form */
 }
 
@@ -290,49 +303,49 @@ body {
 .form-section {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 35px; /* Increased padding */
-    margin-bottom: 35px;
+    border-radius: 10px; /* Reduced from 14px */
+    padding: 20px; /* Reduced from 35px */
+    margin-bottom: 20px; /* Reduced from 35px */
     box-shadow: var(--shadow);
 }
 
 .form-section h2 {
-    font-size: 24px; /* Scaled up */
+    font-size: 18px; /* Reduced from 24px */
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
-    padding-bottom: 12px;
-    margin-bottom: 30px;
+    padding-bottom: 8px; /* Reduced from 12px */
+    margin-bottom: 15px; /* Reduced from 30px */
     font-weight: 600;
 }
 
 /* Form Groups */
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 12px; /* Reduced from 25px */
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px; /* Increased gap */
+    gap: 15px; /* Reduced from 25px */
 }
 
 .form-group label {
     display: block;
-    font-size: 14px; /* Scaled up */
+    font-size: 12px; /* Reduced from 14px */
     font-weight: 600;
     text-transform: uppercase;
     color: var(--text-secondary);
-    margin-bottom: 10px;
+    margin-bottom: 4px; /* Reduced from 10px */
     letter-spacing: 0.5px;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 14px 18px; /* Increased padding */
+    padding: 8px 12px; /* Reduced from 14px 18px */
     border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 16px; /* Scaled up */
+    border-radius: 6px; /* Reduced from 8px */
+    font-size: 14px; /* Reduced from 16px */
     color: var(--text-primary);
     background: white;
     transition: all 0.2s ease;
@@ -347,14 +360,14 @@ body {
 
 /* Checkbox */
 .checkbox-group {
-    margin-top: 15px;
+    margin-top: 8px; /* Reduced from 15px */
 }
 
 .checkbox-label {
     display: flex !important;
     align-items: center;
     cursor: pointer;
-    font-size: 16px !important; /* Scaled up */
+    font-size: 14px !important; /* Reduced from 16px */
     text-transform: none !important;
     font-weight: 400 !important;
     color: var(--text-primary) !important;
@@ -362,25 +375,25 @@ body {
 
 .checkbox-label input[type="checkbox"] {
     width: auto;
-    margin-right: 12px;
-    width: 20px; /* Scaled up */
-    height: 20px; /* Scaled up */
+    margin-right: 8px; /* Reduced from 12px */
+    width: 16px; /* Reduced from 20px */
+    height: 16px; /* Reduced from 20px */
     cursor: pointer;
 }
 
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 20px 40px; /* Increased padding */
+    padding: 12px 20px; /* Reduced from 20px 40px */
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 18px; /* Scaled up */
+    border-radius: 8px; /* Reduced from 10px */
+    font-size: 16px; /* Reduced from 18px */
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-top: 15px;
+    margin-top: 10px; /* Reduced from 15px */
 }
 
 .submit-btn:hover {
@@ -397,17 +410,17 @@ body {
 
 /* Results Section */
 .results-section {
-    margin-top: 40px;
-    max-width: 1200px; /* Matched form width */
+    margin-top: 20px; /* Reduced from 40px */
+    max-width: 1000px; /* Adjusted to match form */
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Result Cards */
 .result-card {
-    border-radius: 14px;
-    padding: 40px;
-    margin-bottom: 30px;
+    border-radius: 10px; /* Reduced from 14px */
+    padding: 20px; /* Reduced from 40px */
+    margin-bottom: 20px; /* Reduced from 30px */
     box-shadow: var(--shadow);
 }
 
@@ -632,6 +645,16 @@ body {
     
     .header h1 {
         font-size: 20px;
+    }
+
+    .main-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .main-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
     }
 }
 
